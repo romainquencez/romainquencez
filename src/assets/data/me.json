@@ -1,0 +1,18 @@
+{
+  "firstname": "Romain",
+  "lastname": "Quencez",
+  "fullname": "Romain Quencez",
+  "title": "Développeur full-stack",
+  "city": "Dijon",
+  "age": 27,
+  "mail": "contact@romainquencez.fr",
+  "license": "Permis B véhiculé",
+  "twitter": "Romain_Quencez",
+  "linkedin": "romainqcz",
+  "github": "romainquencez",
+  "tags": [
+  	["python", "django", "php"],
+    ["html", "css", "javascript", "vue"],
+    ["git"]
+  ]
+}
