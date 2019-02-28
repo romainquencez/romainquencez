@@ -9,22 +9,6 @@
         </div>
       </div>
     </section>
-<!--     <section class="section">
-      <div class="container">
-        <nav class="level">
-          <div class="level-item has-text-centered" v-for="number in resume.numbers" v-bind:key="number.pk">
-            <div>
-              <p class="title">
-                {{ number.number }}
-              </p>
-              <p class="heading">
-                {{ number.title }}
-              </p>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </section> -->
     <section class="section">
       <div class="container">
         <div class="columns">
