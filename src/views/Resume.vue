@@ -17,7 +17,7 @@
               <figure class="image is-256x256 is-inline-block">
                 <img
                   class="is-rounded"
-                  src="../assets/images/me.jpg">
+                  src="@/assets/images/me.jpg">
               </figure>
             </div>
             <h3 class="title is-3">

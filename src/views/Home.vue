@@ -45,7 +45,7 @@ export default {
   justify-content: center;
 }
 .hero-body {
-  background-image: url(../assets/images/tower.jpg);
+  background-image: url('~assets/images/tower.jpg');
   background-size: cover;
   background-position: center;
 }
