@@ -50,7 +50,7 @@
             Hébergé sur <a href="https://github.com/" target="_blank">GitHub</a>.
           </p>
           <p>
-            <a href="https://github.com/romainquencez/romainquencez.github.io" target="_blank">Code source</a> disponible sous license <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY NC SA 4.0</a>.
+            <a :href="me.repository" target="_blank">Code source</a> disponible sous license <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY NC SA 4.0</a>.
           </p>
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 Enhancements :
  - open footer links in new tab
+ - add repository link in store
 
 Fix :
  - remove test posts
