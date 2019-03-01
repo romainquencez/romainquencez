@@ -1,5 +1,8 @@
 ### Current
 
+Enhancements :
+ - open footer links in new tab
+
 Fix :
  - remove test posts
  - remove wip resume sections
