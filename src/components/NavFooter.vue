@@ -33,7 +33,7 @@
             </a>
           </p>
           <p>
-            <a :href="'https://www.linkedin.com/in/' + me.github + '/'"
+            <a :href="'https://www.linkedin.com/in/' + me.linkedin + '/'"
               target="_blank">
               Linkedin
             </a>
