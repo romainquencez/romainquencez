@@ -5,6 +5,7 @@ Enhancements :
  - add repository link in store
  - use history mode for router
  - update packages
+ - move cv first in pages
 
 Fix :
  - remove test posts

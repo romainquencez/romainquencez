@@ -10,14 +10,14 @@ export default new Vuex.Store({
     me: [],
     pages: [
       {
-        name: 'Articles',
-        url: 'posts',
-        icon: 'fas fa-rss'
-      },
-      {
         name: 'CV',
         url: 'resume',
         icon: 'fas fa-map-marked'
+      },
+      {
+        name: 'Articles',
+        url: 'posts',
+        icon: 'fas fa-rss'
       },
       {
         name: 'Contact',
