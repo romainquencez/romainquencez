@@ -8,7 +8,7 @@
             class="navbar-item"
             exact>
             <span class="icon">
-              <i class="fas fa-home"></i>
+              <font-awesome-icon icon="home" />
             </span>
             <span>
               {{ me.fullname }}
@@ -35,7 +35,7 @@
             v-for="(page, index) in pages"
             :key="index">
             <span class="icon">
-              <i :class="page.icon"></i>
+              <font-awesome-icon :icon="page.icon" />
             </span>
             <span>
               {{ page.name }}
@@ -47,7 +47,7 @@
             class="navbar-item"
             target="_blank">
               <span class="icon">
-                <i class="fab fa-github"></i>
+                <font-awesome-icon :icon="['fab', 'github']" />
               </span>
               <span class="is-hidden-desktop">
                 GitHub
@@ -57,7 +57,7 @@
             class="navbar-item"
             target="_blank">
               <span class="icon">
-                <i class="fab fa-linkedin-in"></i>
+                <font-awesome-icon :icon="['fab', 'linkedin-in']" />
               </span>
               <span class="is-hidden-desktop">
                 Linkedin
@@ -69,7 +69,7 @@
               target="_blank"
               :title="'Suivre @' + me.twitter">
               <span class="icon is-small">
-                <i class="fab fa-twitter"></i>
+                <font-awesome-icon :icon="['fab', 'twitter']" />
               </span>
               <span>
                 @{{ me.twitter }}

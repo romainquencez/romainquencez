@@ -12,17 +12,17 @@ export default new Vuex.Store({
       {
         name: 'CV',
         url: 'resume',
-        icon: 'fas fa-map-marked'
+        icon: 'map-marked'
       },
       {
         name: 'Articles',
         url: 'posts',
-        icon: 'fas fa-rss'
+        icon: 'rss'
       },
       {
         name: 'Contact',
         url: 'contact',
-        icon: 'fas fa-envelope'
+        icon: 'envelope'
       }
     ]
   }

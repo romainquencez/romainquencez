@@ -6,6 +6,7 @@ Enhancements :
  - use history mode for router
  - update packages
  - move cv first in pages
+ - use FortAwesome instead of import css
 
 Fix :
  - remove test posts

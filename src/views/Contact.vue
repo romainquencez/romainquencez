@@ -19,7 +19,7 @@
             <a class="button is-link is-medium"
               :href="'mailto:' + me.mail">
               <span class="icon is-medium">
-                <i class="fas fa-envelope"></i>
+                <font-awesome-icon icon="envelope" />
               </span>
               <span>
                 {{ me.mail }}
@@ -34,7 +34,7 @@
             <a class="button is-link is-medium"
               href="https://twitter.com/messages/compose?recipient_id=71254404">
               <span class="icon is-medium">
-                <i class="fab fa-twitter"></i>
+                <font-awesome-icon :icon="['fab', 'twitter']" />
               </span>
               <span>
                 @{{ me.twitter }}

@@ -27,7 +27,7 @@
               <div>
                 <div>
                   <span class="icon">
-                    <i class="fas fa-home"></i>
+                    <font-awesome-icon icon="home" />
                   </span>
                   <span>
                     {{ me.city }}
@@ -35,7 +35,7 @@
                 </div>
                 <div>
                   <span class="icon">
-                    <i class="fas fa-car"></i>
+                    <font-awesome-icon icon="car" />
                   </span>
                   <span>
                     {{ me.license }}
@@ -43,7 +43,7 @@
                 </div>
                 <div>
                   <span class="icon">
-                    <i class="fas fa-calendar-alt"></i>
+                    <font-awesome-icon icon="calendar-alt" />
                   </span>
                   <span>
                     {{ me.age }} ans
@@ -51,7 +51,7 @@
                 </div>
                 <div>
                   <span class="icon">
-                    <i class="fas fa-envelope"></i>
+                    <font-awesome-icon icon="envelope" />
                   </span>
                   <span>
                     <a :href="'mailto:' + this.me.mail">
@@ -63,7 +63,7 @@
               <div class="content">
                 <div>
                   <span class="icon">
-                    <i class="fab fa-twitter"></i>
+                    <font-awesome-icon :icon="['fab', 'twitter']" />
                   </span>
                   <span>
                     <a :href="'https://twitter.com/' + me.twitter">
@@ -73,7 +73,7 @@
                 </div>
                 <div>
                   <span class="icon">
-                    <i class="fab fa-linkedin-in"></i>
+                    <font-awesome-icon :icon="['fab', 'linkedin-in']" />
                   </span>
                   <span>
                     <a :href="'https://www.linkedin.com/in/' + me.linkedin + '/'">
@@ -83,7 +83,7 @@
                 </div>
                 <div>
                   <span class="icon">
-                    <i class="fab fa-github"></i>
+                    <font-awesome-icon :icon="['fab', 'github']" />
                   </span>
                   <span>
                     <a :href="'https://github.com/' + this.me.github + '/'">
