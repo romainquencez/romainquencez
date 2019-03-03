@@ -4,6 +4,7 @@ Enhancements :
  - open footer links in new tab
  - add repository link in store
  - use history mode for router
+ - update packages
 
 Fix :
  - remove test posts
