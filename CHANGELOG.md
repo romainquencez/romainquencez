@@ -1,5 +1,8 @@
 ### Current
 
+Features :
+ - add version number
+
 Enhancements :
  - open footer links in new tab
  - add repository link in store

@@ -52,6 +52,9 @@
           <p>
             <a :href="me.repository" target="_blank">Code source</a> disponible sous license <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY NC SA 4.0</a>.
           </p>
+          <p class="has-text-grey-light">
+            Version {{ version }}
+          </p>
         </div>
       </div>
     </div>
@@ -60,11 +63,13 @@
 
 <script>
 import { mapState } from 'vuex'
+import settings from '@/settings'
 
 export default {
   name: 'NavFooter',
   computed: {
-    ...mapState(['me', 'pages'])
+    ...mapState(['me', 'pages']),
+    version: version => settings.VERSION
   }
 }
 </script>
