@@ -1,14 +1,15 @@
-### Current
+# Current
 
-Fix :
+## Fix
  - fix router base path
+ - fix changelog style
 
-### 0.0.2
+# 0.0.2
 
-Features :
+## Features
  - add version number
 
-Enhancements :
+## Enhancements
  - open footer links in new tab
  - add repository link in store
  - use history mode for router
@@ -16,17 +17,17 @@ Enhancements :
  - move cv first in pages
  - use FortAwesome instead of import css
 
-Fix :
+## Fix
  - remove test posts
  - remove wip resume sections
  - fix path to static images
  - fix linkedin footer link
 
-### 0.0.1
+# 0.0.1
 
-Features :
+## Features
  - create initial project
 
-Enhancements :
+## Enhancements
 
-Fix :
+## Fix
