@@ -1,3 +1,8 @@
+### Current
+
+Fix :
+ - fix router base path
+
 ### 0.0.2
 
 Features :
