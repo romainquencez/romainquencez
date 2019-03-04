@@ -1,4 +1,4 @@
-### Current
+### 0.0.2
 
 Features :
  - add version number
