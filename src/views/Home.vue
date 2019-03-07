@@ -4,16 +4,16 @@
       <div class="hero-body has-text-centered">
         <div class="container">
           <h1 class="title is-1">
-            {{ me.fullname }}
+            {{ info.fullname }}
           </h1>
           <p class="subtitle is-3">
-            {{ me.title }}
+            {{ info.title }}
           </p>
           <p class="content">
-            {{ me.age }} ans, {{ me.city }}
+            {{ info.age }} ans, {{ info.city }}
           </p>
           <div
-            v-for="(group, index) in me.tags"
+            v-for="(group, index) in info.tags"
             :key="index"
             class="container tags">
             <div
@@ -35,7 +35,7 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'Home',
-  computed: { ...mapState(['me']) }
+  computed: { ...mapState(['info']) }
 }
 </script>
 

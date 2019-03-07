@@ -9,9 +9,17 @@
 <script>
 import NavHeader from '@/components/NavHeader.vue'
 import NavFooter from '@/components/NavFooter.vue'
+import { mapState } from 'vuex'
+
 export default {
   name: 'App',
-  components: { NavHeader, NavFooter }
+  components: { NavHeader, NavFooter },
+  computed: { ...mapState(['info']) },
+  created () {
+    if (this.info.length === 0) {
+      this.$store.dispatch('getInfo')
+    }
+  }
 }
 </script>
 

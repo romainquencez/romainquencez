@@ -21,7 +21,7 @@
               </figure>
             </div>
             <h3 class="title is-3">
-              {{ me.fullname }}
+              {{ info.fullname }}
             </h3>
             <div class="box">
               <div>
@@ -30,7 +30,7 @@
                     <font-awesome-icon icon="home" />
                   </span>
                   <span>
-                    {{ me.city }}
+                    {{ info.city }}
                   </span>
                 </div>
                 <div>
@@ -38,7 +38,7 @@
                     <font-awesome-icon icon="car" />
                   </span>
                   <span>
-                    {{ me.license }}
+                    {{ info.license }}
                   </span>
                 </div>
                 <div>
@@ -46,7 +46,7 @@
                     <font-awesome-icon icon="calendar-alt" />
                   </span>
                   <span>
-                    {{ me.age }} ans
+                    {{ info.age }} ans
                   </span>
                 </div>
                 <div>
@@ -54,8 +54,8 @@
                     <font-awesome-icon icon="envelope" />
                   </span>
                   <span>
-                    <a :href="'mailto:' + this.me.mail">
-                      {{ me.mail }}
+                    <a :href="'mailto:' + this.info.mail">
+                      {{ info.mail }}
                     </a>
                   </span>
                 </div>
@@ -66,8 +66,8 @@
                     <font-awesome-icon :icon="['fab', 'twitter']" />
                   </span>
                   <span>
-                    <a :href="'https://twitter.com/' + me.twitter">
-                      @{{ me.twitter }}
+                    <a :href="'https://twitter.com/' + info.twitter">
+                      @{{ info.twitter }}
                     </a>
                   </span>
                 </div>
@@ -76,8 +76,8 @@
                     <font-awesome-icon :icon="['fab', 'linkedin-in']" />
                   </span>
                   <span>
-                    <a :href="'https://www.linkedin.com/in/' + me.linkedin + '/'">
-                      {{ me.linkedin }}
+                    <a :href="'https://www.linkedin.com/in/' + info.linkedin + '/'">
+                      {{ info.linkedin }}
                     </a>
                   </span>
                 </div>
@@ -86,8 +86,8 @@
                     <font-awesome-icon :icon="['fab', 'github']" />
                   </span>
                   <span>
-                    <a :href="'https://github.com/' + this.me.github + '/'">
-                      {{ me.github }}
+                    <a :href="'https://github.com/' + this.info.github + '/'">
+                      {{ info.github }}
                     </a>
                   </span>
                 </div>
@@ -157,6 +157,11 @@ import VueMarkdown from 'vue-markdown'
 export default {
   name: 'resume',
   components: { 'vue-markdown': VueMarkdown },
-  computed: { ...mapState(['me', 'resume']) }
+  computed: { ...mapState(['info', 'resume']) },
+  created () {
+    if (this.resume.length === 0) {
+      this.$store.dispatch('getResume')
+    }
+  }
 }
 </script>

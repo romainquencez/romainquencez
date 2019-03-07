@@ -21,19 +21,19 @@
             Réseaux
           </h4>
           <p>
-            <a :href="'https://twitter.com/' + me.twitter"
+            <a :href="'https://twitter.com/' + info.twitter"
               target="_blank">
               Twitter
             </a>
           </p>
           <p>
-            <a :href="'https://github.com/' + me.github"
+            <a :href="'https://github.com/' + info.github"
               target="_blank">
               Github
             </a>
           </p>
           <p>
-            <a :href="'https://www.linkedin.com/in/' + me.linkedin + '/'"
+            <a :href="'https://www.linkedin.com/in/' + info.linkedin + '/'"
               target="_blank">
               Linkedin
             </a>
@@ -50,7 +50,7 @@
             Hébergé sur <a href="https://github.com/" target="_blank">GitHub</a>.
           </p>
           <p>
-            <a :href="me.repository" target="_blank">Code source</a> disponible sous license <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY NC SA 4.0</a>.
+            <a :href="info.repository" target="_blank">Code source</a> disponible sous license <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY NC SA 4.0</a>.
           </p>
           <p class="has-text-grey-light">
             Version {{ version }}
@@ -68,7 +68,7 @@ import settings from '@/settings'
 export default {
   name: 'NavFooter',
   computed: {
-    ...mapState(['me', 'pages']),
+    ...mapState(['info', 'pages']),
     version: version => settings.VERSION
   }
 }

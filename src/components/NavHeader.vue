@@ -11,7 +11,7 @@
               <font-awesome-icon icon="home" />
             </span>
             <span>
-              {{ me.fullname }}
+              {{ info.fullname }}
             </span>
         </router-link>
         <a role="button"
@@ -43,7 +43,7 @@
           </router-link>
         </div>
         <div class="navbar-end">
-          <a :href="'https://github.com/' + me.github"
+          <a :href="'https://github.com/' + info.github"
             class="navbar-item"
             target="_blank">
               <span class="icon">
@@ -53,7 +53,7 @@
                 GitHub
               </span>
           </a>
-          <a :href="'https://www.linkedin.com/in/' + me.linkedin + '/'"
+          <a :href="'https://www.linkedin.com/in/' + info.linkedin + '/'"
             class="navbar-item"
             target="_blank">
               <span class="icon">
@@ -65,14 +65,14 @@
           </a>
           <span class="navbar-item">
             <a class="button is-small twitter"
-              :href="'https://twitter.com/' + me.twitter"
+              :href="'https://twitter.com/' + info.twitter"
               target="_blank"
-              :title="'Suivre @' + me.twitter">
+              :title="'Suivre @' + info.twitter">
               <span class="icon is-small">
                 <font-awesome-icon :icon="['fab', 'twitter']" />
               </span>
               <span>
-                @{{ me.twitter }}
+                @{{ info.twitter }}
               </span>
             </a>
           </span>
@@ -88,7 +88,7 @@ import { mapState } from 'vuex'
 export default {
   name: 'NavHeader',
   computed: {
-    ...mapState(['me', 'pages'])
+    ...mapState(['info', 'pages'])
   },
   data () {
     return {

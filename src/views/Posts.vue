@@ -31,6 +31,11 @@ export default {
   components: { PostCard },
   computed: {
     ...mapState(['posts'])
+  },
+  created () {
+    if (this.posts.length === 0) {
+      this.$store.dispatch('getPosts')
+    }
   }
 }
 </script>

@@ -8,7 +8,7 @@
             {{ post.title }}
           </h1>
           <p class="subtitle">
-            Rédigé par {{ me.fullname }} le {{ post.publicationDate.toLocaleDateString() }}.
+            Rédigé par {{ info.fullname }} le {{ post.publicationDate.toLocaleDateString() }}.
           </p>
         </div>
       </div>
@@ -41,7 +41,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['me', 'posts']),
+    ...mapState(['info', 'posts']),
     post: function () {
       let slug = this.$props.slug
       return this.posts.find(function (post) {
@@ -74,6 +74,11 @@ export default {
         { property: 'og:type', content: 'article', id: 'og-type' },
         { property: 'og:url', content: window.location.href, id: 'og-url' }
       ]
+    }
+  },
+  created () {
+    if (this.posts.length === 0) {
+      this.$store.dispatch('getPosts')
     }
   }
 }

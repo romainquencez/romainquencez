@@ -1,5 +1,8 @@
 # Current
 
+## Features
+ - use mutations #1
+
 ## Enhancements
  - enable strict mode in dev env
 

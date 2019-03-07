@@ -17,12 +17,12 @@
           </p>
           <p>
             <a class="button is-link is-medium"
-              :href="'mailto:' + me.mail">
+              :href="'mailto:' + info.mail">
               <span class="icon is-medium">
                 <font-awesome-icon icon="envelope" />
               </span>
               <span>
-                {{ me.mail }}
+                {{ info.mail }}
               </span>
             </a>
           </p>
@@ -37,7 +37,7 @@
                 <font-awesome-icon :icon="['fab', 'twitter']" />
               </span>
               <span>
-                @{{ me.twitter }}
+                @{{ info.twitter }}
               </span>
             </a>
           </p>
@@ -56,7 +56,7 @@ import { mapState } from 'vuex'
 export default {
   name: 'Contact',
   computed: {
-    ...mapState(['me'])
+    ...mapState(['info'])
   }
 }
 </script>
