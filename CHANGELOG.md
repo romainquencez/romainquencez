@@ -1,3 +1,8 @@
+# Current
+
+## Enhancements
+ - enable strict mode in dev env
+
 # 0.0.3
 
 ## Fix
