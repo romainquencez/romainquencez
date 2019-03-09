@@ -7,6 +7,7 @@
 ## Enhancements
  - enable strict mode in dev env
  - use lodash find in Post
+ - remove find polyfill
 
 # 0.0.3
 

@@ -16,5 +16,3 @@ Vue.use(Buefy)
 Vue.use(VueHead)
 
 Vue.prototype.moment = moment
-
-require('./find_polyfill.js')
