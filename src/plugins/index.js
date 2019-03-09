@@ -5,6 +5,7 @@ import { faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import Buefy from 'buefy'
 import VueHead from 'vue-head'
+import moment from 'moment'
 
 library.add(faEnvelope, faCalendarAlt, faCar, faHome, faMapMarked, faRss)
 library.add(faGithub, faLinkedinIn, faTwitter)
@@ -13,5 +14,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(Buefy)
 Vue.use(VueHead)
+
+Vue.prototype.moment = moment
 
 require('./find_polyfill.js')

@@ -2,6 +2,7 @@
 
 ## Features
  - use mutations #1
+ - add moment
 
 ## Enhancements
  - enable strict mode in dev env
