@@ -6,6 +6,7 @@
 
 ## Enhancements
  - enable strict mode in dev env
+ - use lodash find in Post
 
 # 0.0.3
 

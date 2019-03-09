@@ -26,6 +26,7 @@
 <script>
 import VueMarkdown from 'vue-markdown'
 import { mapState } from 'vuex'
+import find from 'lodash/find'
 
 export default {
   name: 'Post',
@@ -43,10 +44,7 @@ export default {
   computed: {
     ...mapState(['info', 'posts']),
     post: function () {
-      let slug = this.$props.slug
-      return this.posts.find(function (post) {
-        return post.slug === slug
-      })
+      return find(this.posts, (post) => post.slug === this.slug)
     },
     postTitleShort () {
       let max = 200
