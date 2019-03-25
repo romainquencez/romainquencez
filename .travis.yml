@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '6'
+env:
+  global:
+    - secure: qdyk7vYYc0UVD3soA9jXoNi14DgTzz/YLufj4F2KX1mWYqfVSAY0B9ucFClVLRXcIZk9evep7n+gPki8amhsLQ8xEorEhNsj99Dw0PnZ+DdXNdKfGpCFZalXeGRc88aFNHUkU4/eogupnDodGg3d8d7cb25TH44STDg6uXGXRp3eRPxd1QtstOymESocK6k5vNUhhlMeQQ4aVo9BQFKLmJpCF5g8jW9RpCXiA/4J1lQ75hWlqebAxjfKVzVSTxkdH1fIopvz10O6MjCTf4HZkWhNgwmBpjYhDHXYPnQheVXrpYad2p+TqKGl3X8xEtkT64e//MSzUSVxVvlzrfQXuF1UPwxTI2pWJhQFvvl6UAFo7JRwJQe7uliWgXTwyWODubRG1sKpKJx51AVBbj7T33FG19PiqJRGswBWKSkjCkMN8+tcravRLaHaKj7QYRDRVeNFe2NMXYPpdTaPQZYQBrtYm/n/+eDFYKvNV15CK3ygLThu3ebpNTAzUaa6/s1MqOwVXe2RhUNCfsvW3NwbGcAQTTE0K1t+RVdEblSCXHVFWrmaTdWwP72I1ltHuPzl2q5z0IV3FVrGJUXDoKCub50HSkN6y/c023SZKL7lCYO2Sd0e5wn6GJcDwfQQuFnYaUMVU/f6FxJk6OYqLSUfjHfDgDs8jwYRWEVYAj6XJl0=
+    - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/romainquencez/romainquencez.git
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: ./scripts/deploy.sh
+  on:
+    branch: master
+    node: '5'
