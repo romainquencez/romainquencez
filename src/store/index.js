@@ -27,7 +27,8 @@ export default new Vuex.Store({
         url: 'contact',
         icon: 'envelope'
       }
-    ]
+    ],
+    darkMode: false
   },
   mutations,
   actions

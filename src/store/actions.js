@@ -42,3 +42,7 @@ export const getInfo = ({ commit, state }) => {
     return info
   })
 }
+
+export const setDarkMode = ({ commit, state }, value) => {
+  commit(types.SET_DARK_MODE, value)
+}

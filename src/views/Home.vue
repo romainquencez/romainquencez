@@ -1,6 +1,8 @@
 <template>
   <div>
-    <section class="hero is-dark is-fullheight-with-navbar">
+    <section
+      class="hero is-fullheight-with-navbar is-bold"
+      :class="modeClass">
       <div class="hero-body has-text-centered">
         <div class="container">
           <h1 class="title is-1">
@@ -35,7 +37,11 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'Home',
-  computed: { ...mapState(['info']) }
+  computed: {
+    ...mapState(['info', 'darkMode']),
+    modeClass () {
+      return this.darkMode ? 'is-dark' : 'is-light'
+    }}
 }
 </script>
 
@@ -44,11 +50,7 @@ export default {
   display: flex;
   justify-content: center;
 }
-.hero-body {
-  background-image: url('~assets/images/tower.jpg');
-  background-size: cover;
-  background-position: center;
-}
+
 /* IE11 fix */
 @media all and (-ms-high-contrast:none) {
   .hero.is-fullheight-with-navbar .hero-body {

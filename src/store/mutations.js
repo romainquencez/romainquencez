@@ -9,5 +9,8 @@ export default {
   },
   [types.SET_INFO] (state, { info }) {
     state.info = info
+  },
+  [types.SET_DARK_MODE] (state, value) {
+    state.darkMode = value
   }
 }

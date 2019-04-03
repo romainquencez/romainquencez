@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" :class="modeClass">
     <div class="card-image">
       <a
         :href="post.url"
@@ -11,7 +11,9 @@
     </div>
     <div class="card-content">
       <div class="content">
-        <h3 class="title is-3">
+        <h3
+          class="title is-3"
+          :class="textClass">
           {{ post.title }}
         </h3>
         <p class="has-text-grey-light">
@@ -26,12 +28,13 @@
             {{ tag.name }}
           </div>
         </div>
-        <p>
+        <p :class="textClass">
           {{ post.subTitle }}
         </p>
         <a
           :href="post.url"
-          class="button is-black is-outlined">
+          class="button is-outlined"
+          :class="buttonClass">
           <span class="icon">
             <font-awesome-icon :icon="['fab', 'medium']" />
           </span>
@@ -45,11 +48,23 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   props: ['post'],
   computed: {
+    ...mapState(['darkMode']),
     createdAt () {
       return this.moment(this.post.createdAt).locale('fr').format('dddd Do MMMM YYYY')
+    },
+    modeClass () {
+      return this.darkMode ? 'has-background-dark' : ''
+    },
+    textClass () {
+      return this.darkMode ? 'has-text-white' : ''
+    },
+    buttonClass () {
+      return this.darkMode ? 'is-white' : 'is-black'
     }
   }
 }

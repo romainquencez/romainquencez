@@ -1,6 +1,8 @@
 <template>
   <div>
-    <section class="hero is-dark is-bold">
+    <section
+      class="hero is-bold"
+      :class="modeClass">
       <div class="hero-body has-text-centered">
         <div class="container">
           <h1 class="title is-1">
@@ -9,7 +11,9 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section
+      class="section"
+      :class="sectionClass">
       <div class="container">
         <div class="columns">
           <div class="column is-one-third">
@@ -20,10 +24,14 @@
                   src="@/assets/images/me.jpg">
               </figure>
             </div>
-            <h3 class="title is-3">
+            <h3
+              class="title is-3"
+              :class="modeTitleClass">
               {{ info.fullname }}
             </h3>
-            <div class="box">
+            <div
+              class="box"
+              :class="boxClass">
               <div>
                 <div>
                   <span class="icon">
@@ -99,14 +107,19 @@
               :key="index"
               v-for="(section, index) in resume.sections"
               class="content">
-              <h3 class="title is-3">
+              <h3
+                class="title is-3"
+                :class="modeTitleClass">
                 {{ section.title }}
               </h3>
               <div
                 v-for="(item, index) in section.items"
                 :key="index"
-                class="box">
-                <h5 class="title is-5">
+                class="box"
+                :class="boxClass">
+                <h5
+                  class="title is-5"
+                  :class="modeTitleClass">
                   {{ item.title }}
                 </h5>
                 <p>
@@ -115,7 +128,9 @@
                 <article class="media content">
                   <div class="media-left">
                     <p class="image is-64x64">
-                      <img :src="item.image">
+                      <img
+                        class="is-rounded has-background-white"
+                        :src="item.image">
                     </p>
                   </div>
                   <div class="media-content">
@@ -157,7 +172,21 @@ import VueMarkdown from 'vue-markdown'
 export default {
   name: 'resume',
   components: { 'vue-markdown': VueMarkdown },
-  computed: { ...mapState(['info', 'resume']) },
+  computed: {
+    ...mapState(['info', 'resume', 'darkMode']),
+    modeClass () {
+      return this.darkMode ? 'is-dark' : 'is-light'
+    },
+    boxClass () {
+      return this.darkMode ? 'has-background-dark has-text-white' : ''
+    },
+    sectionClass () {
+      return this.darkMode ? 'has-background-black' : ''
+    },
+    modeTitleClass () {
+      return this.darkMode ? 'has-text-white' : ''
+    }
+  },
   created () {
     if (this.resume.length === 0) {
       this.$store.dispatch('getResume')

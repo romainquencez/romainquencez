@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <nav class="navbar" :class="modeClass" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
         <router-link
@@ -14,6 +14,13 @@
               {{ info.fullname }}
             </span>
         </router-link>
+        <div class="navbar-item is-hidden-desktop">
+          <b-switch
+            :value="darkMode"
+            @input="updateDarkMode">
+            <font-awesome-icon icon="moon" />
+          </b-switch>
+          </div>
         <a role="button"
           class="navbar-burger"
           :class="{'is-active': isOpen}"
@@ -43,6 +50,13 @@
           </router-link>
         </div>
         <div class="navbar-end">
+          <div class="navbar-item is-hidden-touch">
+            <b-switch
+              :value="darkMode"
+              @input="updateDarkMode">
+              <font-awesome-icon icon="moon" />
+            </b-switch>
+          </div>
           <a :href="'https://github.com/' + info.github"
             class="navbar-item"
             target="_blank">
@@ -88,7 +102,15 @@ import { mapState } from 'vuex'
 export default {
   name: 'NavHeader',
   computed: {
-    ...mapState(['info', 'pages'])
+    ...mapState(['info', 'pages', 'darkMode']),
+    modeClass () {
+      return this.darkMode ? 'is-dark' : 'is-light'
+    }
+  },
+  methods: {
+    updateDarkMode (value) {
+      this.$store.dispatch('setDarkMode', value)
+    }
   },
   data () {
     return {

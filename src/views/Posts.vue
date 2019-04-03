@@ -1,6 +1,8 @@
 <template>
   <div>
-    <section class="hero is-dark is-bold">
+    <section
+      class="hero is-bold"
+      :class="modeClass">
       <div class="hero-body has-text-centered">
         <div class="container">
           <h1 class="title is-1">
@@ -9,7 +11,9 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section
+      class="section"
+      :class="sectionClass">
       <div class="container">
         <div class="columns is-multiline">
           <div class="column is-half-desktop is-half-tablet is-full-mobile"
@@ -30,7 +34,13 @@ import PostCard from '@/components/PostCard'
 export default {
   components: { PostCard },
   computed: {
-    ...mapState(['posts'])
+    ...mapState(['posts', 'darkMode']),
+    modeClass () {
+      return this.darkMode ? 'is-dark' : 'is-light'
+    },
+    sectionClass () {
+      return this.darkMode ? 'has-background-black has-text-white' : ''
+    }
   },
   created () {
     if (this.posts.length === 0) {

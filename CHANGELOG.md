@@ -2,6 +2,7 @@
 
 ## Features
  - add Medium integration
+ - add dark mode
 
 # 0.0.4
 

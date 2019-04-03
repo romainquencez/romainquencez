@@ -1,23 +1,29 @@
 <template>
-  <footer class="footer">
+  <footer
+    class="footer"
+    :class="modeFooterClass">
     <div class="container">
       <div class="columns">
         <div class="column content">
-          <h4 class="title is-4">
+          <h4
+            class="title is-4"
+            :class="modeTitleClass">
             Pages
           </h4>
           <p v-for="(page, index) in pages"
             v-bind:key="index">
             <router-link
               :to="{ name: page.url }"
-              active-class="is-active"
+              active-class="has-text-weight-bold"
               >
               {{ page.name }}
             </router-link>
           </p>
         </div>
         <div class="column content">
-          <h4 class="title is-4">
+          <h4
+            class="title is-4"
+            :class="modeTitleClass">
             Réseaux
           </h4>
           <p>
@@ -40,7 +46,9 @@
           </p>
         </div>
         <div class="column content">
-          <h4 class="title is-4">
+          <h4
+            class="title is-4"
+            :class="modeTitleClass">
             A propos
           </h4>
           <p>
@@ -52,7 +60,7 @@
           <p>
             <a :href="info.repository" target="_blank">Code source</a> disponible sous license <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY NC SA 4.0</a>.
           </p>
-          <p class="has-text-grey-light">
+          <p :class="modeVersionClass">
             Version {{ version }}
           </p>
         </div>
@@ -68,8 +76,17 @@ import settings from '@/settings'
 export default {
   name: 'NavFooter',
   computed: {
-    ...mapState(['info', 'pages']),
-    version: version => settings.VERSION
+    ...mapState(['info', 'pages', 'darkMode']),
+    version: version => settings.VERSION,
+    modeFooterClass () {
+      return this.darkMode ? 'has-background-dark has-text-white' : ''
+    },
+    modeTitleClass () {
+      return this.darkMode ? 'has-text-white' : ''
+    },
+    modeVersionClass () {
+      return this.darkMode ? 'has-text-grey' : 'has-text-grey-light'
+    }
   }
 }
 </script>
