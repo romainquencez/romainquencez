@@ -14,7 +14,7 @@
         <div class="columns is-multiline">
           <div class="column is-half-desktop is-half-tablet is-full-mobile"
             v-for="post in posts"
-            :key="post.slug">
+            :key="post.id">
             <post-card :post="post"></post-card>
           </div>
         </div>

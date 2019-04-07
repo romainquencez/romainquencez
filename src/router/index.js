@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home'
 import Posts from '@/views/Posts'
-import Post from '@/views/Post'
 import Resume from '@/views/Resume'
 import Contact from '@/views/Contact'
 
@@ -21,12 +20,6 @@ export default new Router({
       path: '/posts',
       name: 'posts',
       component: Posts
-    },
-    {
-      path: '/posts/:slug',
-      name: 'post',
-      component: Post,
-      props: true
     },
     {
       path: '/resume',

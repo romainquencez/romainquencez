@@ -1,3 +1,8 @@
+# Current
+
+## Features
+ - add Medium integration
+
 # 0.0.4
 
 ## Features
