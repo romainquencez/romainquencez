@@ -4,6 +4,9 @@
  - add Medium integration
  - add dark mode
 
+## Fix
+ - remove router history mode
+
 # 0.0.4
 
 ## Features
