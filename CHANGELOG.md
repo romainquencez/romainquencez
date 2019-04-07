@@ -3,6 +3,7 @@
 ## Enhancements
  - improve resume, add download button
  - add first post
+ - add message if empty posts
 
 # 0.0.5
 

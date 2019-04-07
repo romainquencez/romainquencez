@@ -25,6 +25,9 @@
             </post-card>
           </div>
         </div>
+        <p v-if="!posts.length">
+          Chargement des articles...
+        </p>
       </div>
     </section>
   </div>
