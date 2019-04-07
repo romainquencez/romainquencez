@@ -101,6 +101,16 @@
                 </div>
               </div>
             </div>
+            <a
+              class="button is-primary is-fullwidth is-medium"
+              href="static/cv_fr.pdf">
+              <span class="icon">
+                <font-awesome-icon icon="download" />
+              </span>
+              <span>
+                Télécharger mon CV en PDF
+              </span>
+            </a>
           </div>
           <div class="column is-two-thirds">
             <div
@@ -130,7 +140,7 @@
                     <p class="image is-64x64">
                       <img
                         class="is-rounded has-background-white"
-                        :src="item.image">
+                        :src="'static/' + item.image">
                     </p>
                   </div>
                   <div class="media-content">
