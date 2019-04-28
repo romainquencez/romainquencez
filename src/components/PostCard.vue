@@ -4,8 +4,8 @@
       <a
         :href="post.url"
         target="_blank">
-        <figure class="image is-3by2">
-          <img :src="post.image">
+        <figure class="image is-16by9">
+          <img :src="'static/posts/' + post.image">
         </figure>
       </a>
     </div>
@@ -14,18 +14,20 @@
         <h3
           class="title is-3"
           :class="textClass">
-          {{ post.title }}
+          <a :href="post.url">
+            {{ post.title }}
+          </a>
         </h3>
         <p class="has-text-grey-light">
-          {{ createdAt }}
+          Publié le {{ post.createdAt }}
         </p>
         <div class="tags">
           <div
             v-for="(tag, index) in post.tags"
             :key="index"
             class="tag"
-            :class="'is-' + tag.slug">
-            {{ tag.name }}
+            :class="'is-' + tag">
+            {{ tag }}
           </div>
         </div>
         <p :class="textClass">
@@ -54,9 +56,6 @@ export default {
   props: ['post'],
   computed: {
     ...mapState(['darkMode']),
-    createdAt () {
-      return this.moment(this.post.createdAt).locale('fr').format('dddd Do MMMM YYYY')
-    },
     modeClass () {
       return this.darkMode ? 'has-background-dark' : ''
     },

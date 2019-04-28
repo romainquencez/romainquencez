@@ -18,8 +18,11 @@
         <div class="columns is-multiline">
           <div class="column is-half-desktop is-half-tablet is-full-mobile"
             v-for="post in posts"
-            :key="post.id">
-            <post-card :post="post"></post-card>
+            :key="post.url">
+            <post-card
+              :post="post"
+              v-if="post.lang === 'fr'">
+            </post-card>
           </div>
         </div>
       </div>

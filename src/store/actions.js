@@ -1,27 +1,11 @@
 import Post from '@/api/posts'
 import Resume from '@/api/resume'
 import Info from '@/api/info'
-import { assign } from 'lodash'
 import * as types from './mutation-types'
 
 export const getPosts = ({ commit, state }) => {
   return Post.all(state).then(response => {
-    const prefix = '])}while(1);</x>'
-    const { Post } = JSON.parse(response.data.replace(prefix, '')).payload.references
-    const prefixImage = 'https://cdn-images-1.medium.com/max/800/'
-    const prefixUrl = 'https://medium.com/@romainquencez/'
-    const posts = Object.values(Post).map(
-      ({ id, title, createdAt, virtuals, uniqueSlug }) => assign({}, {
-        id,
-        title,
-        createdAt: new Date(createdAt),
-        subTitle: virtuals.subtitle,
-        image: virtuals.previewImage.imageId ? `${prefixImage}${virtuals.previewImage.imageId}` : null,
-        url: `${prefixUrl}${uniqueSlug}`,
-        tags: virtuals.tags
-      })
-    )
-    console.log(posts)
+    const posts = response.data
     commit(types.SET_POSTS, { posts })
     return posts
   })
