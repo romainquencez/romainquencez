@@ -1,4 +1,4 @@
-# Current
+# 0.0.6
 
 ## Enhancements
  - improve resume, add download button
