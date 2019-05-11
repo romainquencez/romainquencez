@@ -1,5 +1,8 @@
 # Current
 
+## Enhancements
+- update photo
+
 ## Fix
 - fix router url
 
