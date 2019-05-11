@@ -1,4 +1,4 @@
-# Current
+# 0.0.7
 
 ## Enhancements
 - update photo
