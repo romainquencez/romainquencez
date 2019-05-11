@@ -1,5 +1,8 @@
 # Current
 
+## Features
+- add english version
+
 ## Enhancements
 - disable webpack-bundle-analyzer open on startup
 - update packages

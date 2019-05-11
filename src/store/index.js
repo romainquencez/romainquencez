@@ -28,7 +28,20 @@ export default new Vuex.Store({
         icon: 'envelope'
       }
     ],
-    darkMode: false
+    darkMode: false,
+    langs: [
+      {
+        id: 'fr',
+        flag: '🇫🇷',
+        label: 'Français'
+      },
+      {
+        id: 'en',
+        flag: '🇺🇸',
+        label: 'English'
+      }
+    ],
+    lang: 'fr'
   },
   mutations,
   actions

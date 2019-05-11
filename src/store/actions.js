@@ -30,3 +30,7 @@ export const getInfo = ({ commit, state }) => {
 export const setDarkMode = ({ commit, state }, value) => {
   commit(types.SET_DARK_MODE, value)
 }
+
+export const setLang = ({ commit, state }, lang) => {
+  commit(types.SET_LANG, lang)
+}

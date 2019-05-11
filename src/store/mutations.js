@@ -12,5 +12,8 @@ export default {
   },
   [types.SET_DARK_MODE] (state, value) {
     state.darkMode = value
+  },
+  [types.SET_LANG] (state, lang) {
+    state.lang = lang
   }
 }
