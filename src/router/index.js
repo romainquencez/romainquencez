@@ -8,7 +8,7 @@ import Contact from '@/views/Contact'
 Vue.use(Router)
 
 export default new Router({
-  base: process.env.NODE_ENV === 'development' ? '' : '/romainquencez/',
+  base: '',
   routes: [
     {
       path: '/',
