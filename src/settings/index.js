@@ -1,3 +1,3 @@
 export default Object.freeze({
-  VERSION: '0.0.7'
+  VERSION: '0.0.8'
 })

@@ -1,4 +1,4 @@
-# Current
+# 0.0.8
 
 ## Fix
 - fix assets public url
