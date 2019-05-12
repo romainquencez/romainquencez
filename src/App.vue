@@ -72,6 +72,10 @@ $colors: (
   "postgresql": ($postgresql, findColorInvert($postgresql)),
 );
 
+$tablet: 768px;
+
+$navbar-breakpoint: $tablet;
+
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
 </style>

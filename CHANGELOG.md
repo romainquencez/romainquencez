@@ -1,5 +1,8 @@
 # Current
 
+## Enhancements
+- improve header menu
+
 ## Fix
 - fix typos in resume
 

@@ -1,94 +1,114 @@
 <template>
-  <nav class="navbar" :class="modeClass" role="navigation" aria-label="main navigation">
-    <div class="container">
-      <div class="navbar-brand">
+  <nav
+    class="navbar"
+    :class="modeClass"
+    role="navigation"
+    aria-label="main navigation">
+    <div class="navbar-brand">
+      <router-link
+          :to="{ name: 'home' }"
+          active-class="is-active"
+          class="navbar-item"
+          exact>
+          <span class="icon">
+            <font-awesome-icon icon="home" />
+          </span>
+      </router-link>
+
+      <a role="button"
+        class="navbar-burger"
+        :class="{'is-active': isOpen}"
+        aria-label="menu"
+        aria-expanded="false"
+        @click="isOpen = !isOpen">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <!-- pages -->
+    <div class="navbar-menu"
+      :class="{'is-active': isOpen}">
+      <div class="navbar-start">
         <router-link
-            :to="{ name: 'home' }"
-            active-class="is-active"
-            class="navbar-item"
-            exact>
-            <span class="icon">
-              <font-awesome-icon icon="home" />
+          :to="{ name: page.url }"
+          active-class="is-active"
+          class="navbar-item"
+          v-for="(page, index) in pages"
+          :key="index">
+          {{ page.name }}
+        </router-link>
+      </div>
+
+      <hr class="is-hidden-tablet" />
+
+      <div class="navbar-end">
+        <a :href="'https://github.com/' + info.github"
+          class="navbar-item"
+          target="_blank">
+            <font-awesome-icon :icon="['fab', 'github']" />
+            <span class="is-hidden-tablet">
+              GitHub
+            </span>
+        </a>
+        <a :href="'https://www.linkedin.com/in/' + info.linkedin + '/'"
+          class="navbar-item"
+          target="_blank">
+            <font-awesome-icon :icon="['fab', 'linkedin-in']" />
+            <span class="is-hidden-tablet">
+              LinkedIn
+            </span>
+        </a>
+
+        <!-- desktop twitter button -->
+        <span class="navbar-item is-hidden-touch">
+          <a class="button is-small twitter"
+            :href="'https://twitter.com/' + info.twitter"
+            target="_blank"
+            :title="'Suivre @' + info.twitter">
+            <span class="icon is-small">
+              <font-awesome-icon :icon="['fab', 'twitter']" />
             </span>
             <span>
-              {{ info.fullname }}
+              @{{ info.twitter }}
             </span>
-        </router-link>
-        <div class="navbar-item is-hidden-desktop">
+          </a>
+        </span>
+
+        <!-- mobile twitter button -->
+        <a :href="'https://twitter.com/' + info.twitter"
+          class="navbar-item is-hidden-desktop"
+          target="_blank">
+            <font-awesome-icon :icon="['fab', 'twitter']" />
+            <span class="is-hidden-tablet">
+              Twitter
+            </span>
+        </a>
+
+        <hr class="is-hidden-tablet" />
+
+        <!-- dark mode (desktop / tablet) -->
+        <div class="navbar-item is-hidden-mobile">
           <b-switch
             :value="darkMode"
             @input="updateDarkMode">
             <font-awesome-icon icon="moon" />
           </b-switch>
-          </div>
-        <a role="button"
-          class="navbar-burger"
-          :class="{'is-active': isOpen}"
-          aria-label="menu"
-          aria-expanded="false"
-          @click="isOpen = !isOpen">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div class="navbar-menu"
-        :class="{'is-active': isOpen}">
-        <div class="navbar-start">
-          <router-link
-            :to="{ name: page.url }"
-            active-class="is-active"
-            class="navbar-item"
-            v-for="(page, index) in pages"
-            :key="index">
-            <span class="icon">
-              <font-awesome-icon :icon="page.icon" />
-            </span>
-            <span>
-              {{ page.name }}
-            </span>
-          </router-link>
         </div>
-        <div class="navbar-end">
-          <div class="navbar-item is-hidden-touch">
-            <b-switch
-              :value="darkMode"
-              @input="updateDarkMode">
-              <font-awesome-icon icon="moon" />
-            </b-switch>
-          </div>
-          <a :href="'https://github.com/' + info.github"
-            class="navbar-item"
-            target="_blank">
-              <span class="icon">
-                <font-awesome-icon :icon="['fab', 'github']" />
-              </span>
-              <span class="is-hidden-desktop">
-                GitHub
-              </span>
-          </a>
-          <a :href="'https://www.linkedin.com/in/' + info.linkedin + '/'"
-            class="navbar-item"
-            target="_blank">
-              <span class="icon">
-                <font-awesome-icon :icon="['fab', 'linkedin-in']" />
-              </span>
-              <span class="is-hidden-desktop">
-                Linkedin
-              </span>
-          </a>
-          <span class="navbar-item">
-            <a class="button is-small twitter"
-              :href="'https://twitter.com/' + info.twitter"
-              target="_blank"
-              :title="'Suivre @' + info.twitter">
-              <span class="icon is-small">
-                <font-awesome-icon :icon="['fab', 'twitter']" />
-              </span>
-              <span>
-                @{{ info.twitter }}
-              </span>
-            </a>
+
+        <!-- dark mode (mobile) -->
+        <div class="navbar-item is-hidden-tablet-only is-hidden-desktop">
+          <b-switch
+            :value="darkMode"
+            @input="updateDarkMode"
+            class="is-pulled-right">
+          </b-switch>
+          <font-awesome-icon icon="moon" />
+          <span
+            v-if="isOpen"
+            class="is-hidden-tablet">
+            Mode sombre
           </span>
         </div>
       </div>
