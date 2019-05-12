@@ -5,6 +5,7 @@
 
 ## Fix
 - fix typos in resume
+- fix photo size on mobile
 
 # 0.0.8
 

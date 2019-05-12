@@ -17,15 +17,17 @@
       <div class="container">
         <div class="columns">
           <div class="column is-one-third">
-            <div class="content has-text-centered">
-              <figure class="image is-256x256 is-inline-block">
-                <img
-                  class="is-rounded"
-                  src="@/assets/images/me.jpg">
-              </figure>
+            <div class="level">
+              <div class="level-item has-text-centered">
+                <figure class="image is-256x256">
+                  <img
+                    class="is-rounded"
+                    src="@/assets/images/me.jpg">
+                </figure>
+              </div>
             </div>
             <h3
-              class="title is-3"
+              class="title is-3 has-text-centered-touch"
               :class="modeTitleClass">
               {{ info.fullname }}
             </h3>
