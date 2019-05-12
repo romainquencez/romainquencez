@@ -15,6 +15,11 @@ export default {
   name: 'App',
   components: { NavHeader, NavFooter },
   computed: { ...mapState(['info']) },
+  methods: {
+    track () {
+      this.$ga.page('/')
+    }
+  },
   created () {
     if (this.info.length === 0) {
       this.$store.dispatch('getInfo')

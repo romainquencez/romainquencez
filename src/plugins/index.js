@@ -5,6 +5,7 @@ import { faGithub, faLinkedinIn, faTwitter, faMedium } from '@fortawesome/free-b
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import Buefy from 'buefy'
 import VueHead from 'vue-head'
+import VueAnalytics from 'vue-analytics'
 import moment from 'moment'
 
 library.add(faEnvelope, faCalendarAlt, faCar, faHome, faMapMarked, faRss, faMedium, faMoon, faDownload)
@@ -14,5 +15,8 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(Buefy)
 Vue.use(VueHead)
+Vue.use(VueAnalytics, {
+  id: 'UA-61028925-1'
+})
 
 Vue.prototype.moment = moment

@@ -1,5 +1,8 @@
 # Current
 
+## Features
+- add google analytics
+
 ## Enhancements
 - improve header menu
 - update contact page
