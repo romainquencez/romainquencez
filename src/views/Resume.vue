@@ -108,7 +108,7 @@
                 <font-awesome-icon icon="download" />
               </span>
               <span>
-                Télécharger mon CV en PDF
+                Télécharger en PDF
               </span>
             </a>
           </div>

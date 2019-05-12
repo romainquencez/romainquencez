@@ -1,3 +1,8 @@
+# Current
+
+## Fix
+- fix typos in resume
+
 # 0.0.8
 
 ## Fix

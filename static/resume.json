@@ -1,7 +1,7 @@
 {
   "sections": [
     {
-      "title": "Expériences",
+      "title": "Expériences professionnelles",
       "items": [
         {
           "title": "Développeur web, back-end",
@@ -20,7 +20,7 @@
           "location": "ORE",
           "city": "Quetigny",
           "date": "2011 - 2017",
-          "description": " * Développement d’un extranet de gestion (PHP, SQL)\n* Création et suivi de sites web (Wordpress et Joomla\n* Instructeur de cours d’informatique pour jeunes et adultes\n* Initiation de jeunes aux nouvelles technologies (3D, robots...)",
+          "description": " * Développement d’un extranet de gestion (PHP, SQL)\n* Création et suivi de sites web (Wordpress et Joomla)\n* Instructeur de cours d’informatique pour jeunes et adultes\n* Initiation de jeunes aux nouvelles technologies (3D, robots...)",
           "tags": ["php", "mysql", "javascript", "html", "css", "wordpress", "windows"]
         },
         {
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "title": "Formation",
+      "title": "Formations",
       "items": [
         {
           "title": "Licence Pro Métiers de l'Internet",
