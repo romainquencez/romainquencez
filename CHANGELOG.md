@@ -2,6 +2,7 @@
 
 ## Enhancements
 - improve header menu
+- update contact page
 
 ## Fix
 - fix typos in resume

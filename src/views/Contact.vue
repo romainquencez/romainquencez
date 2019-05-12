@@ -2,7 +2,7 @@
   <div>
     <section
       class="hero is-bold"
-      :class="modeClass">
+      :class="darkMode ? 'is-dark' : 'is-light'">
       <div class="hero-body has-text-centered">
         <div class="container">
           <h1 class="title is-1">
@@ -13,45 +13,28 @@
     </section>
     <section
       class="section"
-      :class="sectionClass">
-      <div class="container">
-        <div class="content has-text-centered">
-          <p>
-            Vous pouvez me contacter à l'adresse mail suivante :
-          </p>
-          <p>
-            <a class="button is-link is-medium"
-              :class="buttonClass"
-              :href="'mailto:' + info.mail">
-              <span class="icon is-medium">
-                <font-awesome-icon icon="envelope" />
-              </span>
-              <span>
-                {{ info.mail }}
-              </span>
-            </a>
-          </p>
-          <p>
-            <br />
-            ...vous pouvez aussi m'envoyer un messsage sur Twitter :
-          </p>
-          <p>
-            <a
-              class="button is-link is-medium"
-              :class="buttonClass"
-              href="https://twitter.com/messages/compose?recipient_id=71254404">
-              <span class="icon is-medium">
-                <font-awesome-icon :icon="['fab', 'twitter']" />
-              </span>
-              <span>
-                @{{ info.twitter }}
-              </span>
-            </a>
-          </p>
-          <p>
-            Merci !
-          </p>
+      :class="darkMode ? 'has-background-black has-text-white' : ''">
+      <div class="columns">
+        <div class="column"></div>
+        <div
+          v-for="(element, index) in elements"
+          :key="index"
+          class="column has-text-centered">
+          <font-awesome-icon
+            :icon="element.icon"
+            class="icon is-large"/><br />
+          <div
+            class="title is-5"
+            :class="darkMode ? 'has-text-white' : ''">
+            {{ element.title }}
+          </div>
+          <a
+            :href="element.link.url"
+            target="_blank">
+            {{ element.link.title }}
+          </a>
         </div>
+        <div class="column"></div>
       </div>
     </section>
   </div>
@@ -64,14 +47,33 @@ export default {
   name: 'Contact',
   computed: {
     ...mapState(['info', 'darkMode']),
-    modeClass () {
-      return this.darkMode ? 'is-dark' : 'is-light'
-    },
-    sectionClass () {
-      return this.darkMode ? 'has-background-black has-text-white' : ''
-    },
-    buttonClass () {
-      return this.darkMode ? 'is-light is-inverted' : ''
+    elements () {
+      return [
+        {
+          icon: 'envelope',
+          title: 'Email',
+          link: {
+            url: 'mailto:' + this.info.mail,
+            title: this.info.mail
+          }
+        },
+        {
+          icon: ['fab', 'linkedin-in'],
+          title: 'LinkedIn',
+          link: {
+            url: 'https://www.linkedin.com/in/' + this.info.linkedin + '/',
+            title: 'in/' + this.info.linkedin
+          }
+        },
+        {
+          icon: ['fab', 'twitter'],
+          title: 'Twitter',
+          link: {
+            url: 'https://twitter.com/messages/compose?recipient_id=71254404',
+            title: '@' + this.info.twitter
+          }
+        }
+      ]
     }
   }
 }
