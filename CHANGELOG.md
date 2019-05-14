@@ -3,6 +3,7 @@
 ## Enhancements
 - add webpack-bundle-analyzer
 - remove buefy, moment and unused icons
+- import only used bulma stylesheets
 
 # 0.1.0
 

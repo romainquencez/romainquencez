@@ -83,5 +83,24 @@ $navbar-breakpoint: $tablet;
 
 $dimensions: 16 24 32 48 64 96 128 256;
 
-@import "~bulma";
+@import "~bulma/sass/base/_all.sass";
+
+@import "~bulma/sass/components/navbar.sass";
+@import "~bulma/sass/components/card.sass";
+@import "~bulma/sass/components/level.sass";
+@import "~bulma/sass/components/list.sass";
+@import "~bulma/sass/components/media.sass";
+
+@import "~bulma/sass/elements/button.sass";
+@import "~bulma/sass/elements/container.sass";
+@import "~bulma/sass/elements/title.sass";
+@import "~bulma/sass/elements/box.sass";
+@import "~bulma/sass/elements/content.sass";
+@import "~bulma/sass/elements/icon.sass";
+@import "~bulma/sass/elements/image.sass";
+@import "~bulma/sass/elements/tag.sass";
+
+@import "~bulma/sass/grid/columns.sass";
+
+@import "~bulma/sass/layout/_all.sass";
 </style>
