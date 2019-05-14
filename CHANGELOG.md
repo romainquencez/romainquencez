@@ -1,4 +1,4 @@
-# Current
+# 0.1.2
 
 ## Enhancements
 - compress assets images
