@@ -88,29 +88,14 @@
 
         <hr class="is-hidden-tablet" />
 
-        <!-- dark mode (desktop / tablet) -->
-        <div class="navbar-item is-hidden-mobile">
-          <b-switch
-            :value="darkMode"
-            @input="updateDarkMode">
-            <font-awesome-icon icon="moon" />
-          </b-switch>
-        </div>
-
-        <!-- dark mode (mobile) -->
-        <div class="navbar-item is-hidden-tablet-only is-hidden-desktop">
-          <b-switch
-            :value="darkMode"
-            @input="updateDarkMode"
-            class="is-pulled-right">
-          </b-switch>
+        <a
+          class="navbar-item"
+          @click="invertDarkMode">
           <font-awesome-icon icon="moon" />
-          <span
-            v-if="isOpen"
-            class="is-hidden-tablet">
+          <span class="is-hidden-tablet">
             Mode sombre
           </span>
-        </div>
+        </a>
       </div>
     </div>
   </nav>
@@ -128,8 +113,8 @@ export default {
     }
   },
   methods: {
-    updateDarkMode (value) {
-      this.$store.dispatch('setDarkMode', value)
+    invertDarkMode () {
+      this.$store.dispatch('setDarkMode', !this.darkMode)
     }
   },
   data () {

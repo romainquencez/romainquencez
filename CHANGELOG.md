@@ -2,6 +2,7 @@
 
 ## Enhancements
 - add webpack-bundle-analyzer
+- remove buefy, moment and unused icons
 
 # 0.1.0
 
