@@ -1,3 +1,8 @@
+# Current
+
+## Fix
+- add custom domain after build
+
 # 0.1.1
 
 ## Enhancements
