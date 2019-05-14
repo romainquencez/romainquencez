@@ -5,6 +5,9 @@
 - remove buefy, moment and unused icons
 - import only used bulma stylesheets
 
+## Fix
+- fix vue-analytics and router
+
 # 0.1.0
 
 ## Features

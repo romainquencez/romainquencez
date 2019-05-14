@@ -4,10 +4,12 @@ import Home from '@/views/Home'
 import Posts from '@/views/Posts'
 import Resume from '@/views/Resume'
 import Contact from '@/views/Contact'
+import VueAnalytics from 'vue-analytics'
+import settings from '@/settings'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   base: '',
   routes: [
     {
@@ -39,3 +41,10 @@ export default new Router({
     }
   }
 })
+
+Vue.use(VueAnalytics, {
+  id: settings.GA_ID,
+  router
+})
+
+export default router

@@ -1,3 +1,4 @@
 export default Object.freeze({
-  VERSION: '0.1.0'
+  VERSION: '0.1.0',
+  GA_ID: 'UA-61028925-1'
 })
