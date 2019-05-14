@@ -1,3 +1,8 @@
+# Current
+
+## Enhancements
+- add webpack-bundle-analyzer
+
 # 0.1.0
 
 ## Features
