@@ -7,6 +7,7 @@
 
 ## Fix
 - fix vue-analytics and router
+- fix portrait tablet display
 
 # 0.1.0
 

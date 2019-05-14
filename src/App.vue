@@ -77,9 +77,7 @@ $colors: (
   "postgresql": ($postgresql, findColorInvert($postgresql)),
 );
 
-$tablet: 768px;
-
-$navbar-breakpoint: $tablet;
+$navbar-breakpoint: 769px;
 
 $dimensions: 16 24 32 48 64 96 128 256;
 
