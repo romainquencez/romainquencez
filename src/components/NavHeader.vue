@@ -47,7 +47,9 @@
         <a :href="'https://github.com/' + info.github"
           class="navbar-item"
           target="_blank">
-            <font-awesome-icon :icon="['fab', 'github']" />
+            <font-awesome-icon
+              :icon="['fab', 'github']"
+              class="is-hidden-mobile" />
             <span class="is-hidden-tablet">
               GitHub
             </span>
@@ -55,7 +57,9 @@
         <a :href="'https://www.linkedin.com/in/' + info.linkedin + '/'"
           class="navbar-item"
           target="_blank">
-            <font-awesome-icon :icon="['fab', 'linkedin-in']" />
+            <font-awesome-icon
+              :icon="['fab', 'linkedin-in']"
+              class="is-hidden-mobile" />
             <span class="is-hidden-tablet">
               LinkedIn
             </span>
@@ -80,7 +84,9 @@
         <a :href="'https://twitter.com/' + info.twitter"
           class="navbar-item is-hidden-desktop"
           target="_blank">
-            <font-awesome-icon :icon="['fab', 'twitter']" />
+            <font-awesome-icon
+              :icon="['fab', 'twitter']"
+              class="is-hidden-mobile" />
             <span class="is-hidden-tablet">
               Twitter
             </span>
@@ -91,7 +97,9 @@
         <a
           class="navbar-item"
           @click="invertDarkMode">
-          <font-awesome-icon icon="moon" />
+          <font-awesome-icon
+            icon="moon"
+            class="is-hidden-mobile" />
           <span class="is-hidden-tablet">
             Mode sombre
           </span>

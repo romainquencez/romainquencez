@@ -4,6 +4,7 @@
 - add webpack-bundle-analyzer
 - remove buefy, moment and unused icons
 - import only used bulma stylesheets
+- remove mobile menu icons
 
 ## Fix
 - fix vue-analytics and router
