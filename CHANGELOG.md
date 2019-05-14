@@ -5,6 +5,7 @@
 - remove buefy, moment and unused icons
 - import only used bulma stylesheets
 - remove mobile menu icons
+- update dark mode label
 
 ## Fix
 - fix vue-analytics and router

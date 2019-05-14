@@ -101,7 +101,7 @@
             icon="moon"
             class="is-hidden-mobile" />
           <span class="is-hidden-tablet">
-            Mode sombre
+            Affichage {{ darkMode ? 'clair' : 'sombre' }}
           </span>
         </a>
       </div>
