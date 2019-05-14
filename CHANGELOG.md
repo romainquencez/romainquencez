@@ -1,5 +1,8 @@
 # Current
 
+## Enhancements
+- compress assets images
+
 ## Fix
 - add custom domain after build
 
