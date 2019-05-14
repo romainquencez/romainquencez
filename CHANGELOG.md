@@ -2,6 +2,7 @@
 
 ## Enhancements
 - compress assets images
+- add critical stylesheets
 
 ## Fix
 - add custom domain after build
