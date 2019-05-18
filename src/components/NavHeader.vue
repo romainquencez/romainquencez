@@ -9,6 +9,7 @@
           :to="{ name: 'home' }"
           active-class="is-active"
           class="navbar-item"
+          @click.native="isOpen = false"
           exact>
           <span class="icon">
             <font-awesome-icon icon="home" />

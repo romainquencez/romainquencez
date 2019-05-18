@@ -3,6 +3,7 @@
 ## Enhancements
 - disable webpack-bundle-analyzer open on startup
 - update packages
+- close navbar menu on home click
 
 ## Fix
 - remove unused vue logo
