@@ -2,6 +2,7 @@
 
 ## Enhancements
 - disable webpack-bundle-analyzer open on startup
+- update packages
 
 ## Fix
 - remove unused vue logo
