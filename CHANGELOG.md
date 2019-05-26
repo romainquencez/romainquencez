@@ -1,3 +1,8 @@
+# Current
+
+## Enhancements
+- disable webpack-bundle-analyzer open on startup
+
 # 0.1.2
 
 ## Enhancements
