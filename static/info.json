@@ -2,11 +2,17 @@
   "firstname": "Romain",
   "lastname": "Quencez",
   "fullname": "Romain Quencez",
-  "title": "Développeur full-stack",
+  "title": {
+    "fr": "Développeur full-stack",
+    "en": "Full-stack developer"
+  },
   "city": "Dijon",
   "age": 27,
   "mail": "contact@romainquencez.fr",
-  "license": "Permis B véhiculé",
+  "license": {
+    "fr": "Permis B véhiculé",
+    "en": "Driver's license with car"
+  },
   "twitter": "Romain_Quencez",
   "linkedin": "romainqcz",
   "github": "romainquencez",
