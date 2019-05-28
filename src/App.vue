@@ -88,6 +88,7 @@ $dimensions: 16 24 32 48 64 96 128 256;
 @import "~bulma/sass/components/level.sass";
 @import "~bulma/sass/components/list.sass";
 @import "~bulma/sass/components/media.sass";
+@import "~bulma/sass/components/dropdown.sass";
 
 @import "~bulma/sass/elements/button.sass";
 @import "~bulma/sass/elements/container.sass";

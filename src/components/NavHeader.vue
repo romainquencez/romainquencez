@@ -105,6 +105,25 @@
             Affichage {{ darkMode ? 'clair' : 'sombre' }}
           </span>
         </a>
+
+        <hr class="is-hidden-tablet" />
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            {{ lang === 'fr' ? 'Langues' : 'Languages' }}
+          </a>
+
+          <div class="navbar-dropdown is-right">
+            <a
+              class="navbar-item"
+              :class="lang === item.id ? 'is-active' : ''"
+              v-for="item in langs"
+              :key="item.id"
+              @click="invertLanguage(item.id)">
+              {{ item.flag }} {{ item.label }}
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -116,7 +135,7 @@ import { mapState } from 'vuex'
 export default {
   name: 'NavHeader',
   computed: {
-    ...mapState(['info', 'pages', 'darkMode']),
+    ...mapState(['langs', 'lang', 'info', 'pages', 'darkMode']),
     modeClass () {
       return this.darkMode ? 'is-dark' : 'is-light'
     }
@@ -124,6 +143,9 @@ export default {
   methods: {
     invertDarkMode () {
       this.$store.dispatch('setDarkMode', !this.darkMode)
+    },
+    invertLanguage (lang) {
+      if (lang !== this.lang) this.$store.dispatch('setLang', lang)
     }
   },
   data () {
