@@ -15,11 +15,11 @@
           class="title is-3"
           :class="textClass">
           <a :href="post.url">
-            {{ post.title }}
+            {{ post.title[lang] }}
           </a>
         </h3>
         <p class="has-text-grey-light">
-          Publié le {{ post.createdAt }}
+          {{ lang === 'fr' ? 'Publié le' : 'Published on' }} {{ post.createdAt }}
         </p>
         <div class="tags">
           <div
@@ -31,17 +31,17 @@
           </div>
         </div>
         <p :class="textClass">
-          {{ post.subTitle }}
+          {{ post.subTitle[lang] }}
         </p>
         <a
-          :href="post.url"
+          :href="post.url[lang]"
           class="button is-outlined"
           :class="buttonClass">
           <span class="icon">
             <font-awesome-icon :icon="['fab', 'medium']" />
           </span>
           <span>
-            Lire sur Medium
+            {{ lang === 'fr' ? 'Lire sur' : 'Read on' }} Medium
           </span>
         </a>
       </div>
@@ -55,7 +55,7 @@ import { mapState } from 'vuex'
 export default {
   props: ['post'],
   computed: {
-    ...mapState(['darkMode']),
+    ...mapState(['darkMode', 'lang']),
     modeClass () {
       return this.darkMode ? 'has-background-dark' : ''
     },

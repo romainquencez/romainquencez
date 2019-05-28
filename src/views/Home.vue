@@ -9,10 +9,10 @@
             {{ info.fullname }}
           </h1>
           <p class="subtitle is-3">
-            {{ info.title }}
+            {{ info.title ? info.title[lang] : '' }}
           </p>
           <p class="content">
-            {{ info.age }} ans, {{ info.city }}
+            {{ info.age }} {{ lang === 'fr' ? 'ans' : 'years old' }}, {{ info.city }}
           </p>
           <div
             v-for="(group, index) in info.tags"
@@ -38,7 +38,7 @@ import { mapState } from 'vuex'
 export default {
   name: 'Home',
   computed: {
-    ...mapState(['info', 'darkMode']),
+    ...mapState(['info', 'darkMode', 'lang']),
     modeClass () {
       return this.darkMode ? 'is-dark' : 'is-light'
     }}

@@ -6,7 +6,7 @@
       <div class="hero-body has-text-centered">
         <div class="container">
           <h1 class="title is-1">
-            CV
+            {{ lang === 'fr' ? 'CV' : 'Resume' }}
           </h1>
         </div>
       </div>
@@ -48,7 +48,7 @@
                     <font-awesome-icon icon="car" />
                   </span>
                   <span>
-                    {{ info.license }}
+                    {{ info.license ? info.license[lang] : '' }}
                   </span>
                 </div>
                 <div>
@@ -56,7 +56,7 @@
                     <font-awesome-icon icon="calendar-alt" />
                   </span>
                   <span>
-                    {{ info.age }} ans
+                    {{ info.age }} {{ lang === 'fr' ? 'ans' : 'years old' }}
                   </span>
                 </div>
                 <div>
@@ -110,7 +110,7 @@
                 <font-awesome-icon icon="download" />
               </span>
               <span>
-                Télécharger en PDF
+                {{ lang === 'fr' ? 'Télécharger en PDF' : 'Download PDF' }}
               </span>
             </a>
           </div>
@@ -122,7 +122,7 @@
               <h3
                 class="title is-3"
                 :class="modeTitleClass">
-                {{ section.title }}
+                {{ section.title[lang] }}
               </h3>
               <div
                 v-for="(item, index) in section.items"
@@ -132,10 +132,10 @@
                 <h5
                   class="title is-5"
                   :class="modeTitleClass">
-                  {{ item.title }}
+                  {{ item.title[lang] }}
                 </h5>
                 <p>
-                  <vue-markdown :source="item.description"></vue-markdown>
+                  <vue-markdown :source="item.description[lang]"></vue-markdown>
                 </p>
                 <article class="media content">
                   <div class="media-left">
@@ -185,7 +185,7 @@ export default {
   name: 'resume',
   components: { 'vue-markdown': VueMarkdown },
   computed: {
-    ...mapState(['info', 'resume', 'darkMode']),
+    ...mapState(['info', 'resume', 'darkMode', 'lang']),
     modeClass () {
       return this.darkMode ? 'is-dark' : 'is-light'
     },

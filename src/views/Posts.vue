@@ -6,7 +6,7 @@
       <div class="hero-body has-text-centered">
         <div class="container">
           <h1 class="title is-1">
-            Articles
+            {{ lang === 'fr' ? 'Articles' : 'Posts' }}
           </h1>
         </div>
       </div>
@@ -17,16 +17,14 @@
       <div class="container">
         <div class="columns is-multiline">
           <div class="column is-half-desktop is-half-tablet is-full-mobile"
-            v-for="post in posts"
-            :key="post.url">
-            <post-card
-              :post="post"
-              v-if="post.lang === 'fr'">
+            v-for="(post, index) in posts"
+            :key="index">
+            <post-card :post="post">
             </post-card>
           </div>
         </div>
         <p v-if="!posts.length">
-          Chargement des articles...
+          {{ lang === 'fr' ? 'Chargement des articles...' : 'Loading articles ...' }}
         </p>
       </div>
     </section>
@@ -40,7 +38,7 @@ import PostCard from '@/components/PostCard'
 export default {
   components: { PostCard },
   computed: {
-    ...mapState(['posts', 'darkMode']),
+    ...mapState(['posts', 'darkMode', 'lang']),
     modeClass () {
       return this.darkMode ? 'is-dark' : 'is-light'
     },

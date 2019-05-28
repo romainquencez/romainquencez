@@ -13,17 +13,26 @@ export default new Vuex.Store({
     info: [],
     pages: [
       {
-        name: 'CV',
+        name: {
+          fr: 'CV',
+          en: 'Resume'
+        },
         url: 'resume',
         icon: 'map-marked'
       },
       {
-        name: 'Articles',
+        name: {
+          fr: 'Articles',
+          en: 'Posts'
+        },
         url: 'posts',
         icon: 'rss'
       },
       {
-        name: 'Contact',
+        name: {
+          fr: 'Contact',
+          en: 'Contact'
+        },
         url: 'contact',
         icon: 'envelope'
       }

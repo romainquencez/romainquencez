@@ -38,7 +38,7 @@
           class="navbar-item"
           v-for="(page, index) in pages"
           :key="index">
-          {{ page.name }}
+          {{ page.name[lang] }}
         </router-link>
       </div>
 
