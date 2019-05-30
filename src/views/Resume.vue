@@ -22,7 +22,7 @@
                 <figure class="image is-256x256">
                   <img
                     class="is-rounded"
-                    src="@/assets/images/me.jpg">
+                    src="static/me.png">
                 </figure>
               </div>
             </div>
