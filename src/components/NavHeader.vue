@@ -145,6 +145,7 @@ export default {
       this.$store.dispatch('setDarkMode', !this.darkMode)
     },
     invertLanguage (lang) {
+      localStorage.setItem('lang', lang)
       if (lang !== this.lang) this.$store.dispatch('setLang', lang)
     }
   },

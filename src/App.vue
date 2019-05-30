@@ -24,15 +24,20 @@ export default {
     if (this.info.length === 0) {
       this.$store.dispatch('getInfo')
     }
-    let userLanguage = navigator.language || navigator.userLanguage
-    if (userLanguage) {
-      // for example, transform 'en-US' to 'en'
-      userLanguage = userLanguage.toLowerCase().substr(0, 2)
-      this.langs.forEach(lang => {
-        if (userLanguage === lang.id && this.lang !== lang.id) {
-          this.$store.dispatch('setLang', lang.id)
-        }
-      })
+    const localLanguage = localStorage.getItem('lang')
+    if (localLanguage) {
+      this.$store.dispatch('setLang', localLanguage)
+    } else {
+      let userLanguage = navigator.language || navigator.userLanguage
+      if (userLanguage) {
+        // for example, transform 'en-US' to 'en'
+        userLanguage = userLanguage.toLowerCase().substr(0, 2)
+        this.langs.forEach(lang => {
+          if (userLanguage === lang.id && this.lang !== lang.id) {
+            this.$store.dispatch('setLang', lang.id)
+          }
+        })
+      }
     }
   }
 }
