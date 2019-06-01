@@ -142,7 +142,12 @@ export default {
   },
   methods: {
     invertDarkMode () {
-      this.$store.dispatch('setDarkMode', !this.darkMode)
+      const newValue = !this.darkMode
+      // store user choice
+      localStorage.setItem('darkMode', newValue ? 'dark' : 'light')
+      localStorage.setItem('darkModeChoosen', true)
+      // set new mode
+      this.$store.dispatch('setDarkMode', newValue)
     },
     invertLanguage (lang) {
       localStorage.setItem('lang', lang)

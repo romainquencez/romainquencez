@@ -8,6 +8,7 @@
 - update packages
 - close navbar menu on home click
 - update photo
+- store prefered user dark mode
 
 ## Fix
 - remove unused vue logo

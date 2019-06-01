@@ -14,7 +14,7 @@ import { mapState } from 'vuex'
 export default {
   name: 'App',
   components: { NavHeader, NavFooter },
-  computed: { ...mapState(['info', 'langs', 'lang']) },
+  computed: { ...mapState(['info', 'langs', 'lang', 'darkMode']) },
   methods: {
     track () {
       this.$ga.page('/')
@@ -38,6 +38,12 @@ export default {
           }
         })
       }
+    }
+    // dark mode
+    if (localStorage.getItem('darkModeChoosen')) {
+      this.$store.dispatch(
+        'setDarkMode',
+        localStorage.getItem('darkMode') === 'dark')
     }
   }
 }
