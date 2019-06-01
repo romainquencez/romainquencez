@@ -1,7 +1,7 @@
 <template>
   <footer
     class="footer"
-    :class="modeFooterClass">
+    :class="darkMode ? 'has-background-dark has-text-white' : ''">
     <div class="container">
       <div class="columns">
         <div class="column content">
@@ -54,7 +54,7 @@
           <p v-html="builtText"></p>
           <p v-html="hostedText"></p>
           <p v-html="codeText"></p>
-          <p :class="modeVersionClass">
+          <p :class="darkMode ? 'has-text-grey' : 'has-text-grey-light'">
             Version {{ version }}
           </p>
         </div>
@@ -72,14 +72,8 @@ export default {
   computed: {
     ...mapState(['info', 'pages', 'darkMode', 'lang']),
     version: version => settings.VERSION,
-    modeFooterClass () {
-      return this.darkMode ? 'has-background-dark has-text-white' : ''
-    },
     modeTitleClass () {
       return this.darkMode ? 'has-text-white' : ''
-    },
-    modeVersionClass () {
-      return this.darkMode ? 'has-text-grey' : 'has-text-grey-light'
     },
     builtText () {
       const vue = '<a href="https://vuejs.org/" target="_blank">Vue</a>'

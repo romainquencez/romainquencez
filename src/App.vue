@@ -21,9 +21,7 @@ export default {
     }
   },
   created () {
-    if (this.info.length === 0) {
-      this.$store.dispatch('getInfo')
-    }
+    if (!this.info.length) this.$store.dispatch('getInfo')
     const localLanguage = localStorage.getItem('lang')
     if (localLanguage) {
       this.$store.dispatch('setLang', localLanguage)

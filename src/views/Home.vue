@@ -2,7 +2,7 @@
   <div>
     <section
       class="hero is-fullheight-with-navbar is-bold"
-      :class="modeClass">
+      :class="darkMode ? 'is-dark' : 'is-light'">
       <div class="hero-body has-text-centered">
         <div class="container">
           <h1 class="title is-1">
@@ -38,10 +38,8 @@ import { mapState } from 'vuex'
 export default {
   name: 'Home',
   computed: {
-    ...mapState(['info', 'darkMode', 'lang']),
-    modeClass () {
-      return this.darkMode ? 'is-dark' : 'is-light'
-    }}
+    ...mapState(['info', 'darkMode', 'lang'])
+  }
 }
 </script>
 

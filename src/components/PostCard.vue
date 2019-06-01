@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :class="modeClass">
+  <div class="card" :class="darkMode ? 'has-background-dark' : ''">
     <div class="card-image">
       <a
         :href="post.url"
@@ -36,7 +36,7 @@
         <a
           :href="post.url[lang]"
           class="button is-outlined"
-          :class="buttonClass">
+          :class="darkMode ? 'is-white' : 'is-black'">
           <span class="icon">
             <font-awesome-icon :icon="['fab', 'medium']" />
           </span>
@@ -56,14 +56,8 @@ export default {
   props: ['post'],
   computed: {
     ...mapState(['darkMode', 'lang']),
-    modeClass () {
-      return this.darkMode ? 'has-background-dark' : ''
-    },
     textClass () {
       return this.darkMode ? 'has-text-white' : ''
-    },
-    buttonClass () {
-      return this.darkMode ? 'is-white' : 'is-black'
     }
   }
 }

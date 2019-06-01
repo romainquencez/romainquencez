@@ -9,6 +9,7 @@
 - close navbar menu on home click
 - update photo
 - store prefered user dark mode
+- clean code
 
 ## Fix
 - remove unused vue logo

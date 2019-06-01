@@ -2,7 +2,7 @@
   <div>
     <section
       class="hero is-bold"
-      :class="modeClass">
+      :class="darkMode ? 'is-dark' : 'is-light'">
       <div class="hero-body has-text-centered">
         <div class="container">
           <h1 class="title is-1">
@@ -13,7 +13,7 @@
     </section>
     <section
       class="section"
-      :class="sectionClass">
+      :class="darkMode ? 'has-background-black' : ''">
       <div class="container">
         <div class="columns">
           <div class="column is-one-third">
@@ -186,23 +186,15 @@ export default {
   components: { 'vue-markdown': VueMarkdown },
   computed: {
     ...mapState(['info', 'resume', 'darkMode', 'lang']),
-    modeClass () {
-      return this.darkMode ? 'is-dark' : 'is-light'
-    },
     boxClass () {
       return this.darkMode ? 'has-background-dark has-text-white' : ''
-    },
-    sectionClass () {
-      return this.darkMode ? 'has-background-black' : ''
     },
     modeTitleClass () {
       return this.darkMode ? 'has-text-white' : ''
     }
   },
   created () {
-    if (this.resume.length === 0) {
-      this.$store.dispatch('getResume')
-    }
+    if (!this.resume.length) this.$store.dispatch('getResume')
   }
 }
 </script>

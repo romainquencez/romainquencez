@@ -1,7 +1,7 @@
 <template>
   <nav
     class="navbar"
-    :class="modeClass"
+    :class="darkMode ? 'is-dark' : 'is-light'"
     role="navigation"
     aria-label="main navigation">
     <div class="navbar-brand">
@@ -135,10 +135,7 @@ import { mapState } from 'vuex'
 export default {
   name: 'NavHeader',
   computed: {
-    ...mapState(['langs', 'lang', 'info', 'pages', 'darkMode']),
-    modeClass () {
-      return this.darkMode ? 'is-dark' : 'is-light'
-    }
+    ...mapState(['langs', 'lang', 'info', 'pages', 'darkMode'])
   },
   methods: {
     invertDarkMode () {
