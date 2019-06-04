@@ -1,4 +1,4 @@
-# Current
+# 0.2.0
 
 ## Features
 - add english version
