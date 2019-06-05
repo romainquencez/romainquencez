@@ -1,0 +1,97 @@
+{
+  "sections": [
+    {
+      "title": {
+        "fr": "Expériences professionnelles",
+        "en": "Work experiences"
+      },
+      "items": [
+        {
+          "title": {
+            "fr": "Développeur web, back-end",
+            "en": "Backend developper"
+          },
+          "link": "https://www.atolcd.com",
+          "image": "atol.png",
+          "location": "Atol Conseils & Développements",
+          "city": "Gevrey-Chambertin",
+          "date": "2018 - aujourd\"hui",
+          "description": {
+            "fr": "* Création d'un viewer\n* Développement d'une application de gestion",
+            "en": ""
+          },
+          "tags": ["python", "django", "postgresql", "javascript", "html", "css", "git", "linux"]
+        },
+        {
+          "title": {
+            "fr": "Développeur web, formateur",
+            "en": "Web developper, IT support"
+          },
+          "link": "https://association-ore.fr",
+          "image": "ore.png",
+          "location": "ORE",
+          "city": "Quetigny",
+          "date": "2011 - 2017",
+          "description": {
+            "fr": " * Développement d’un extranet de gestion (PHP, SQL)\n* Création et suivi de sites web (Wordpress et Joomla)\n* Instructeur de cours d’informatique pour jeunes et adultes\n* Initiation de jeunes aux nouvelles technologies (3D, robots...)",
+            "en": ""
+          },
+          "tags": ["php", "mysql", "javascript", "html", "css", "wordpress", "windows"]
+        },
+        {
+          "title": {
+            "fr": "Développeur Android (stage)",
+            "en": "Android developper (intership)"
+          },
+          "link": "http://www.indelebil.fr",
+          "image": "indelebil.png",
+          "location": "Studio Indélebil",
+          "city": "Dijon",
+          "date": "2013",
+          "description": {
+            "fr": "* Création d’une application Android\n* Mise en place de l’interface graphique et de l’algorithmique",
+            "en": ""
+          },
+          "tags": ["android", "java", "windows"]
+        }
+      ]
+    },
+    {
+      "title": "Formations",
+      "items": [
+        {
+          "title": "Licence Pro Métiers de l'Internet",
+          "link": "http://sciences-techniques.u-bourgogne.fr",
+          "image": "ufr.png",
+          "location": "UFR Sciences & Techniques",
+          "city": "Dijon",
+          "date": "2017-2018",
+          "description": {
+            "fr": "* Développement web, AngularJS, SQL, Java...\n* Création d’applications Android\n* Systèmes Unix, Réseau (mail, DNS, serveur de fichiers...)",
+            "en": ""
+          },
+          "tags": ["git", "javascript", "html", "css", "linux"]
+        },
+        {
+          "title": "Licence Pro Activités et Techniques de Communication",
+          "link": "http://iutdijon.u-bourgogne.fr",
+          "image": "iut.png",
+          "location": "IUT",
+          "city": "Dijon",
+          "date": "2016-2017",
+          "description": {
+            "fr": "* Communication des organisations\n* Droit numérique\n* Développement web\n* Création graphique",
+            "en": ""
+          },
+          "tags": ["html", "css", "javascript", "wordpress"]
+        }
+      ]
+    }
+  ],
+  "numbers": [
+    {
+      "title": "années d'expérience",
+      "number": 5
+    }
+  ]
+}
